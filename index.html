@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+  <meta name="naver-site-verification" content="da18d596ea109cfa2fe027e6ce69258a03c0d359" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="google-site-verification" content="BtBII3918J1J9BnNiNfjVaPn0QXfIj5xoi1G_8qtFk4" />
@@ -31,23 +32,24 @@
       min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Segoe UI", system-ui, sans-serif;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 20px;
     }
     .wrap {
-      max-width: 780px;
+      max-width: 800px;
       width: 100%;
       background: #ffffff;
       border-radius: 24px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+      box-shadow: 0 15px 45px rgba(0,0,0,0.08);
       overflow: hidden;
       display: flex;
-      flex-direction: row;
+      flex-direction: row; /* PC에서는 가로 배열 */
     }
     .left {
       flex: 1;
-      padding: 48px 36px;
+      padding: 50px 40px;
       background: linear-gradient(145deg, #1a2a44 0%, #1f3a5f 100%);
       color: #fff;
       display: flex;
@@ -62,170 +64,166 @@
       padding: 6px 16px;
       font-size: 13px;
       font-weight: 600;
-      letter-spacing: 0.5px;
       margin-bottom: 20px;
       width: fit-content;
     }
     .left h1 {
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 700;
       line-height: 1.4;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
-    .left h1 span {
-      color: #7fc9ff;
-    }
+    .left h1 span { color: #7fc9ff; }
     .left p {
-      color: rgba(255,255,255,0.75);
-      font-size: 15px;
+      color: rgba(255,255,255,0.8);
+      font-size: 16px;
       line-height: 1.7;
     }
     .right {
       flex: 1.2;
-      padding: 48px 36px;
+      padding: 50px 40px;
+      background: #fff;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center; /* 내부 요소 가운데 정렬 */
+      text-align: center;
     }
     .right .label {
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       color: #1a2a44;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
     .voucher {
-      background: #f0f5fe;
+      width: 100%;
+      background: #f8faff;
       border: 2px dashed #1a2a44;
       border-radius: 16px;
-      padding: 28px 24px;
-      text-align: center;
-      margin-bottom: 20px;
+      padding: 30px 20px;
+      margin-bottom: 24px;
       position: relative;
     }
-    .voucher::before,
-    .voucher::after {
+    .voucher::before, .voucher::after {
       content: '';
       position: absolute;
-      width: 24px;
-      height: 24px;
-      background: #f5f7fc;
+      width: 20px;
+      height: 20px;
+      background: #fff; /* 카드 배경색과 동일하게 */
       border-radius: 50%;
       top: 50%;
       transform: translateY(-50%);
     }
-    .voucher::before { left: -13px; }
-    .voucher::after { right: -13px; }
+    .voucher::before { left: -11px; border-right: 1px solid transparent; }
+    .voucher::after { right: -11px; border-left: 1px solid transparent; }
+    
     .voucher .code-display {
-      font-size: 34px;
+      font-size: 36px;
       font-weight: 800;
       letter-spacing: 4px;
       color: #1a2a44;
       font-family: "SF Mono", "Fira Code", monospace;
     }
     .voucher .sub {
-      font-size: 13px;
-      color: #5a6b85;
-      margin-top: 6px;
+      font-size: 14px;
+      color: #667a99;
+      margin-top: 8px;
     }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
       width: 100%;
+      max-width: 280px;
       padding: 16px 0;
       border: none;
       border-radius: 40px;
-      background: linear-gradient(135deg, #1a2a44, #1f3a5f);
+      background: #1a2a44;
       color: #fff;
       font-size: 16px;
       font-weight: 700;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       transition: all 0.2s ease;
     }
     .btn:hover {
-      background: linear-gradient(135deg, #1f3a5f, #2a4a74);
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(26,42,68,0.25);
+      background: #2a4a74;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(26,42,68,0.2);
     }
-    .btn:active { transform: translateY(0); }
     .helper {
-      font-size: 13px;
+      font-size: 14px;
       color: #888e9a;
-      text-align: center;
-      margin-top: 14px;
+      margin-top: 20px;
       line-height: 1.6;
     }
     .helper strong { color: #1a2a44; }
     .foot {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #999;
       text-align: center;
-      padding: 16px 36px;
-      background: #f9fafc;
-      font-size: 12px;
-      color: #aaafb9;
-      border-top: 1px solid #eef0f4;
-      width: 100%;
     }
     .toast {
       position: fixed;
-      bottom: 28px;
+      bottom: 30px;
       left: 50%;
       transform: translateX(-50%) translateY(20px);
       background: #1a2a44;
       color: #fff;
-      padding: 12px 24px;
-      border-radius: 40px;
+      padding: 12px 28px;
+      border-radius: 50px;
       font-size: 14px;
-      font-weight: 600;
       opacity: 0;
-      transition: all 0.25s ease;
-      pointer-events: none;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+      z-index: 9999;
     }
     .toast.show {
       opacity: 1;
       transform: translateX(-50%) translateY(0);
     }
-    @media (max-width: 620px) {
+    @media (max-width: 720px) {
       .wrap { flex-direction: column; }
-      .left { padding: 36px 28px; }
-      .left h1 { font-size: 22px; }
-      .right { padding: 36px 28px; }
-      .voucher .code-display { font-size: 28px; }
+      .left { padding: 40px 30px; text-align: center; align-items: center; }
+      .right { padding: 40px 30px; }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="left">
+  <main class="wrap">
+    <section class="left">
       <div class="tag">SSF샵 추천인 안내</div>
-      <h1>추천인 코드 <span>Goodcode</span>를<br>입력하면 혜택이?</h1>
-      <p>회원가입 또는 첫 주문 과정에서<br>추천인 코드를 입력하면 추가 포인트나<br>할인 혜택을 받을 수 있습니다.</p>
-    </div>
-    <div class="right">
-      <div class="label">🎫 추천인 코드</div>
+      <h1>추천인 코드 <span>Goodcode</span><br>입력하고 혜택 받기</h1>
+      <p>회원가입 시 추천인 코드를 입력하면<br>즉시 사용 가능한 포인트와<br>다양한 할인 혜택이 제공됩니다.</p>
+    </section>
+    <section class="right">
+      <div class="label">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+        추천인 코드
+      </div>
       <div class="voucher">
         <div class="code-display" id="refCode">Goodcode</div>
-        <div class="sub">SSF샵 추천인 코드</div>
+        <div class="sub">SSF SHOP REFERRAL CODE</div>
       </div>
       <button class="btn" id="copyBtn">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
         코드 복사하기
       </button>
       <p class="helper">
-        <strong>SSF샵</strong> 가입 또는 주문 페이지에서<br>
-        추천인 입력란에 위 코드를 붙여넣기 하세요.
+        <strong>SSF샵</strong> 가입 페이지 내<br>
+        추천인 입력란에 위 코드를 입력하세요.
       </p>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <div class="foot">
+  <footer class="foot">
     이 페이지는 SSF샵 추천인 코드 안내를 위한 정보 페이지입니다.
-  </div>
+  </footer>
 
-  <div id="toast" class="toast">✅ 코드가 복사되었습니다</div>
+  <div id="toast" class="toast">✅ 코드가 복사되었습니다!</div>
 
   <script>
     (function() {
