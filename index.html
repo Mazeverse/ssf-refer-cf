@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="BtBII3918J1J9BnNiNfjVaPn0QXfIj5xoi1G_8qtFk4" />
+  <meta name="naver-site-verification" content="f28f86b7853e4f6704297b86d7def790b41e00e4" />
+  <title>SSF샵 추천인 코드 | Goodcode 입력하고 혜택 받기</title>
+  <meta name="description" content="SSF샵 가입 시 추천인 코드 Goodcode를 입력하면 추가 혜택을 받을 수 있습니다. 코드 복사해서 입력란에 붙여넣기만 하면 끝." />
+  <meta name="keywords" content="SSF샵 추천인, SSF샵 추천인코드, SSF샵 Goodcode, SSF샵 가입혜택" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://ssf-refer-cf.pages.dev/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SSF샵 추천인 코드 Goodcode" />
+  <meta property="og:description" content="SSF샵 신규 가입시 추천인 코드 Goodcode를 입력하고 혜택을 받아보세요." />
+  <meta property="og:url" content="https://ssf-refer-cf.pages.dev/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎫</text></svg>" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "SSF샵 추천인 코드",
+    "description": "SSF샵 가입 시 입력하는 추천인 코드입니다.",
+    "brand": { "@type": "Brand", "name": "SSF샵" }
+  }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f5f7fc;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Segoe UI", system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .wrap {
+      max-width: 780px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+    }
+    .left {
+      flex: 1;
+      padding: 48px 36px;
+      background: linear-gradient(145deg, #1a2a44 0%, #1f3a5f 100%);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .left .tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 40px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+      width: fit-content;
+    }
+    .left h1 {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+    .left h1 span {
+      color: #7fc9ff;
+    }
+    .left p {
+      color: rgba(255,255,255,0.75);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .right {
+      flex: 1.2;
+      padding: 48px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .right .label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a2a44;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .voucher {
+      background: #f0f5fe;
+      border: 2px dashed #1a2a44;
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .voucher::before,
+    .voucher::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: #f5f7fc;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .voucher::before { left: -13px; }
+    .voucher::after { right: -13px; }
+    .voucher .code-display {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      color: #1a2a44;
+      font-family: "SF Mono", "Fira Code", monospace;
+    }
+    .voucher .sub {
+      font-size: 13px;
+      color: #5a6b85;
+      margin-top: 6px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 16px 0;
+      border: none;
+      border-radius: 40px;
+      background: linear-gradient(135deg, #1a2a44, #1f3a5f);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn:hover {
+      background: linear-gradient(135deg, #1f3a5f, #2a4a74);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(26,42,68,0.25);
+    }
+    .btn:active { transform: translateY(0); }
+    .helper {
+      font-size: 13px;
+      color: #888e9a;
+      text-align: center;
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+    .helper strong { color: #1a2a44; }
+    .foot {
+      text-align: center;
+      padding: 16px 36px;
+      background: #f9fafc;
+      font-size: 12px;
+      color: #aaafb9;
+      border-top: 1px solid #eef0f4;
+      width: 100%;
+    }
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #1a2a44;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 40px;
+      font-size: 14px;
+      font-weight: 600;
+      opacity: 0;
+      transition: all 0.25s ease;
+      pointer-events: none;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    @media (max-width: 620px) {
+      .wrap { flex-direction: column; }
+      .left { padding: 36px 28px; }
+      .left h1 { font-size: 22px; }
+      .right { padding: 36px 28px; }
+      .voucher .code-display { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="left">
+      <div class="tag">SSF샵 추천인 안내</div>
+      <h1>추천인 코드 <span>Goodcode</span>를<br>입력하면 혜택이?</h1>
+      <p>회원가입 또는 첫 주문 과정에서<br>추천인 코드를 입력하면 추가 포인트나<br>할인 혜택을 받을 수 있습니다.</p>
+    </div>
+    <div class="right">
+      <div class="label">🎫 추천인 코드</div>
+      <div class="voucher">
+        <div class="code-display" id="refCode">Goodcode</div>
+        <div class="sub">SSF샵 추천인 코드</div>
+      </div>
+      <button class="btn" id="copyBtn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        코드 복사하기
+      </button>
+      <p class="helper">
+        <strong>SSF샵</strong> 가입 또는 주문 페이지에서<br>
+        추천인 입력란에 위 코드를 붙여넣기 하세요.
+      </p>
+    </div>
+  </div>
+
+  <div class="foot">
+    이 페이지는 SSF샵 추천인 코드 안내를 위한 정보 페이지입니다.
+  </div>
+
+  <div id="toast" class="toast">✅ 코드가 복사되었습니다</div>
+
+  <script>
+    (function() {
+      var btn = document.getElementById('copyBtn');
+      var code = 'Goodcode';
+      var toast = document.getElementById('toast');
+      btn.addEventListener('click', function() {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code);
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = code;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+        toast.classList.add('show');
+        clearTimeout(toast._t);
+        toast._t = setTimeout(function() { toast.classList.remove('show'); }, 1600);
+      });
+    })();
+  </script>
+</body>
+</html>
